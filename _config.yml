@@ -1,0 +1,7 @@
+theme: minima
+
+# Site settings
+title: magma
+description: A description of your site
+url: https://danielthiloschroeder.org/magma-website/
+baseurl: "magma-website/"
