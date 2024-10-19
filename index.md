@@ -8,8 +8,9 @@ title: Magma Universe
 Functional programming and category theory constitute a close and formal relationship that employs a precise and
 structured language:
 
-1. **Abstraction**: Functional programming (FP) and Category Theory (CT) both prioritize abstraction, where functions (
-   morphisms) and data types (objects) can be reasoned about independently of their concrete implementations.
+1. **Abstraction**: [Functional programming](https://en.wikipedia.org/wiki/Functional_programming) (FP) 
+   and [Category Theory](https://en.wikipedia.org/wiki/Category_theory) (CT) both prioritize abstraction, where functions (morphisms)
+   and data types (objects) can be reasoned about independently of their concrete implementations.
 
 2. **Compositionality**: Both FP and CT emphasize the composition of functions (in FP) and morphisms (in CT).
    Compositionality allows building complex structures and behaviors from simple, reusable components, promoting
