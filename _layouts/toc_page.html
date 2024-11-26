@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  {% include head.html %}
+  <style>
+    .page-content {
+      display: flex;
+    }
+
+    .toc { 
+      width: 250px; 
+      margin-right: 20px;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+    }
+
+    .toc a {
+      display: block;
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper toc"> 
+      <h2>Table of Contents</h2>
+      <ul id="toc-list"></ul> </div>
+
+    <div class="wrapper content-wrapper">
+      {{ content }} 
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    const headings = document.querySelectorAll('.content-wrapper h2, .content-wrapper h3'); 
+    const tocList = document.getElementById('toc-list');
+
+    headings.forEach(heading => {
+      const level = heading.tagName.toLowerCase();
+      const title = heading.textContent;
+      const link = '#' + heading.id; 
+
+      const listItem = document.createElement('li');
+      const tocLink = document.createElement('a');
+      tocLink.href = link;
+      tocLink.textContent = title;
+      tocLink.classList.add(level); 
+
+      listItem.appendChild(tocLink);
+      tocList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>

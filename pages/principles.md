@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: toc_page
 title: PRINCIPLES OF PROGRAM CONSTRUCTION
 permalink: /princples/
 ---
