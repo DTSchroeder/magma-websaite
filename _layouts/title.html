@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  {% include head.html %}
+  <style>
+    body {
+      margin: 0; 
+    }
+
+    .header-container { /* Container for the header */
+      position: fixed; /* Stick the header to the top */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white; /* Add a background color if needed */
+      z-index: 100; /* Ensure the header is on top of other elements */
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img { 
+      width: 50vw; 
+      max-width: 100%; 
+      height: auto; 
+    }
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    {% include title_header.html %} 
+  </div>
+
+  <div class="content-container">
+    <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="Magma Logo"> 
+  </div>
+</body>
+</html>
