@@ -12,12 +12,39 @@
       margin-right: 20px;
       padding: 20px;
       border-right: 1px solid #ccc;
+      font-family: Arial, sans-serif; 
+    }
+
+    .toc h2 {
+      font-size: 14px; 
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .toc ul {
+      list-style: none; 
+      padding: 0;
     }
 
     .toc a {
       display: block;
       margin-bottom: 5px;
       text-decoration: none;
+      color: #333; 
+    }
+
+    .toc a:hover {
+      text-decoration: underline; 
+    }
+
+    .toc .h2 { 
+      font-weight: bold;
+      margin-left: 0px; 
+    }
+
+    .toc .h3 { 
+      font-weight: normal;
+      margin-left: 15px; 
     }
   </style>
 </head>
@@ -27,7 +54,8 @@
   <main class="page-content" aria-label="Content">
     <div class="wrapper toc"> 
       <h2>Table of Contents</h2>
-      <ul id="toc-list"></ul> </div>
+      <ul id="toc-list"></ul> 
+    </div>
 
     <div class="wrapper content-wrapper">
       {{ content }} 
